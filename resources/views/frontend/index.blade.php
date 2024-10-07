@@ -114,7 +114,7 @@
                 <div class="col-12">
                     <ul>
                         <li data-animation class="image-view"
-                            data-img-cursor="<img src='{{ asset('frontend-assets/images/what_we_do_img.jpgs') }}' />">
+                            data-img-cursor="<img src='{{ asset('frontend-assets/images/what_we_do_img.jpg') }}' />">
                             <div class="icon">
                                 <img src="{{ asset('frontend-assets/icons/ui-ux.svg') }}" alt="about"
                                     class="img-fluid w-100 svg" />

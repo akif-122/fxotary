@@ -1,11 +1,44 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
+    build: {
+        manifest: true,
+        rtl: true,
+        outDir: 'public/build/',
+        cssCodeSplit: true,
+        
+    },
     plugins: [
-        laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
-            refresh: true,
-        }),
+        
+        viteStaticCopy({
+            targets: [
+                {
+                    src: 'resources/css',
+                    dest: 'css'
+                },
+                {
+                    src: 'resources/fonts',
+                    dest: ''
+                },
+                {
+                    src: 'resources/images',
+                    dest: ''
+                },
+                {
+                    src: 'resources/js',
+                    dest: ''
+                },
+                {
+                    src: 'resources/maps',
+                    dest: ''
+                },
+                {
+                    src: 'resources/scss',
+                    dest: ''
+                },
+            ],
+        })
     ],
 });
